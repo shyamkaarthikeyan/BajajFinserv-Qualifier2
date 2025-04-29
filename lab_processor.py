@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 class LabReportProcessor:
     def __init__(self):
         # Set the Tesseract path for Linux (Render environment)
-        pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+        pytesseract.pytesseract.tesseract_cmd = r'/usr/local/bin/tesseract'
         
         # Verify Tesseract is accessible
         try:
