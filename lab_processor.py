@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 class LabReportProcessor:
     def __init__(self):
         # Set the Tesseract path explicitly
-        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+        pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
         
         # Verify Tesseract is accessible
         try:
