@@ -1,10 +1,12 @@
 #!/bin/bash
-# Update package lists
+
+# Update the package list
 apt-get update
 
-# Install Tesseract OCR
+# Install Tesseract OCR (and dependencies)
 apt-get install -y tesseract-ocr
-# Install dependencies from requirements.txt
+
+# Install other dependencies from requirements.txt
 pip install --no-cache-dir -r requirements.txt
-# Print Tesseract version for verification
+# Verify the Tesseract installation
 tesseract --version
