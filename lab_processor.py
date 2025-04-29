@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class LabReportProcessor:
     def __init__(self):
-        # Set the Tesseract path explicitly
+        # Set the Tesseract path for Linux (Render environment)
         pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
         
         # Verify Tesseract is accessible
@@ -179,4 +179,4 @@ class LabReportProcessor:
         if not test.get("test_unit"):
             unit_match = re.search(r'([A-Za-z\/%]+)$', line)
             if unit_match:
-                test["test_unit"] = unit_match.group(1).strip() 
+                test["test_unit"] = unit_match.group(1).strip()
